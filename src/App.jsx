@@ -2,7 +2,6 @@ const App = () => {
   return (
     <>
       <label>Snuxr</label>
-      
     </>
   )
 }
