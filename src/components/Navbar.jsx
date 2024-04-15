@@ -1,4 +1,4 @@
-import { MdKeyboardArrowDown } from "react-icons/md";
+import SearchInput from "./forms/SearchInput";
 import Link from "./utils/Link";
 
 const NavBar = () => {
@@ -12,16 +12,16 @@ const NavBar = () => {
             <Link
                 key={i}
                 to={link.path}
-                className='m-3 text-white text-lg'
+                className='m-3 text-slate-300 text-base'
             >
                 {link.label}
             </Link>
         )
     })
     return (
-        <div className="flex flex-row gap-2">
-            <label>Snuxr</label>
-            <div>Category Brand <MdKeyboardArrowDown /></div>
+        <div className="flex flex-row text-slate-300 items-center justify-between p-1">
+            <label className="font-extralight text-3xl">Snuxr</label>
+            <SearchInput />
             <div>
                 {content}
             </div>
