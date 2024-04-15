@@ -3,14 +3,14 @@ import Link from "./utils/Link";
 
 const NavBar = () => {
     const NavLinks = [
-        { label: 'Deals', path: '/deals' },
-        { label: 'Cart', path: '/cart' },
-        { label: 'Orders', path: '/orders' }
+        { id:1, label: 'Deals', path: '/deals' },
+        { id:2, label: 'Cart', path: '/cart' },
+        { id:3, label: 'Orders', path: '/orders' }
     ]
-    const content = NavLinks.map((link, i) => {
+    const content = NavLinks.map((link) => {
         return (
             <Link
-                key={i}
+                key={link.id}
                 to={link.path}
                 className='m-3 text-slate-300 text-base'
             >
