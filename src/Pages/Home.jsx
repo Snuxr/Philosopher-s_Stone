@@ -1,4 +1,6 @@
 import BannerSlider from "../Components/Banners/BannerSlider"
+import CategoryBox from "../Components/Categories/CategoryBox"
+import { faker } from "@faker-js/faker"
 
 const Home = () => {
     
@@ -44,14 +46,97 @@ const Home = () => {
         },
     ]
 
+    const Categories = [
+        {
+            id: faker.string.uuid(),
+            input: 'Dope Gadgets',
+            options:[
+                'TP-7',
+                'PO-33 KO',
+                'Apple Vision Pro',
+                'R1',
+                'Meta Quest 3',
+            ]
+        },
+        {
+            id: faker.string.uuid(),
+            input: 'Phones',
+            options:[
+                'Samsung Galaxy S24 Ultra',
+                'Iphone 15 Pro',
+                'Noting Phone (1)',
+                'Xiaomi 14 Ultra',
+                'Oneplus 12R',
+            ]
+        },
+        {
+            id: faker.string.uuid(),
+            input: 'Earphones',
+            options:[
+                'Apple AirPods Pro 2',
+                'Samsung Galaxy Buds 2 Pro',
+                'CMF by Nothing Buds',
+                'Bose QuietComfort Earbuds 2',
+            ]
+        },
+        {
+            id: faker.string.uuid(),
+            input: 'Laptops',
+            options:[
+                'MacBook Pro M3',
+                'Asus Zenbook 13 OLED',
+                'Macbook Air M3',
+                'Dell XPS 15 OLED',
+                'Lenovo Chromebook Duet 3',
+                'Asus ROG Zephyrus G14',
+                'Acer Swift 5',
+            ]
+        },
+        {
+            id: faker.string.uuid(),
+            input: 'Watches',
+            options:[
+                'Apple Watch SE',
+                'Garmin Venu 3S',
+                'Amazfit Balance',
+                'Withings ScanWatch 2',
+            ]
+        },
+        {
+            id: 3,
+            input: 'Accessories',
+            options:[
+                'Chargers',
+                'Layers',
+                'Phone Covers',
+                'Desktop Accessories',
+            ]
+        },
+        {
+            id: faker.string.uuid(),
+            input: 'Services',
+            options:[
+                'Customer Care',
+                'Gadgets Insurance',
+                'EMI',
+            ]
+        },
+    ]
+
+    const content = Categories.map((category) => {
+        return (
+            <CategoryBox key={category.id} options={category.options} >{category.input}</CategoryBox>
+        )
+    })
+
     return (
-        <div className="flex flex-col items-center">
+        <div className="mt-8 mb-8 ">
             <div className="grid grid-cols-2 gap-2">
                 <BannerSlider data={leftBanner_Data} />
                 <BannerSlider data={rightBanner_Data} />
             </div>
-            <div>
-                contents
+            <div className="flex flex-col m-6">
+               <div className="flex flex-row">{content}</div>
             </div>
         </div>
     )

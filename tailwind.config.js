@@ -11,6 +11,9 @@ export default {
       },
       height: {
         'cover':'98%'
+      },
+      boxShadow: {
+        'full': '1px 1px 30px 1px'
       }
     },
   },
