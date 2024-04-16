@@ -1,5 +1,5 @@
-import SearchInput from "./forms/SearchInput";
-import Link from "./utils/Link";
+import SearchInput from "../Forms/SearchInput";
+import Link from "../Utils/Link";
 
 const NavBar = () => {
     const NavLinks = [

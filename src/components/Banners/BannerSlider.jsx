@@ -41,7 +41,7 @@ const BannerSlider = () => {
         slidesToScroll: 1,
         autoplay: true,
         speed: 1000,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 2000,
         waitForAnimate: false,
         cssEase: "linear",
         pauseOnHover: true,
