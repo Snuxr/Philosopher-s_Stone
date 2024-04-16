@@ -1,5 +1,5 @@
-import BannerSlider from "./components/Banners/BannerSlider";
-import NavBar from "./components/Navbar";
+import BannerSlider from "./Components/Banners/BannerSlider";
+import NavBar from "./Components/Navbar/Navbar";
 
 const App = () => {
   return (

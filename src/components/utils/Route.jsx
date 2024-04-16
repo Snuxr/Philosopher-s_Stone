@@ -1,4 +1,4 @@
-import useNavigation from "../../hooks/useNavigation";
+import useNavigation from "../../Hooks/useNavigation";
 
 const Route = ({ path, children }) => {
     const { currentPath } = useNavigation()
