@@ -21,8 +21,8 @@ const BannerSlider = ({ data }) => {
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        speed: 1000,
-        autoplaySpeed: 2000,
+        speed: 500,
+        autoplaySpeed: 3000,
         waitForAnimate: false,
         cssEase: "linear",
         pauseOnHover: true,
@@ -34,7 +34,7 @@ const BannerSlider = ({ data }) => {
         )
 
         return (
-            <div key={image.id} className="font-extralight text-xl m-1" >
+            <div key={image.id} className="font-extralight text-xl border-none outline-none" >
                 <div className={`absolute top-4 left-6 flex flex-col justify-start p-1 ${classes}`}>
                     Introducing
                     <div className="flex flex-row items-center gap-2 text-base">
@@ -42,7 +42,7 @@ const BannerSlider = ({ data }) => {
                         {image.title}
                     </div>
                 </div>
-                <img className="rounded-3xl" src={image.link} alt={image.name} />
+                <img className="select-none border-none outline-none rounded-3xl" src={image.link} alt={image.name} />
             </div>
         )
     })
