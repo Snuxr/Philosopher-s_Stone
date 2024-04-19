@@ -1,6 +1,7 @@
 import BannerSlider from "../Components/Banners/BannerSlider"
 import CategoryBox from "../Components/Categories/CategoryBox"
 import ProductOverview from "../Components/Products/ProductOverview"
+import { useFetchProductsQuery } from "../store"
 
 const Home = () => {
 
@@ -75,21 +76,7 @@ const Home = () => {
         }
     ]
 
-    // const { data, isError, isSuccess } = useFetchProductsQuery()
-    const data = [
-        {
-            id: 1,
-            title: "Classic Black Baseball Cap",
-            price: 100,
-            description: `Elevate your casual wear with this timeless black baseball cap. Made with high-quality, breathable fabric, it features an adjustable strap for the perfect fit.
-            Whether you're out for a jog or just running errands, this cap adds a touch of style to any outfit.`,
-            images: [
-                "https://i.imgur.com/xGQOw3p.jpeg",
-                "https://i.imgur.com/KeqG6r4.jpeg",
-                "https://i.imgur.com/oO5OUjb.jpeg"
-            ],
-        }
-    ]
+    const { data, isError, isSuccess } = useFetchProductsQuery()
 
     const CategoryBoxContent = Categories.map((category) => {
         return (
@@ -99,21 +86,20 @@ const Home = () => {
 
     let ProductOverviewContent;
 
-    // if (false) {
-    //     ProductOverviewContent = <img className="w-96 m-10" src='https://httpstatusdogs.com/img/402.jpg' alt="402" />
-    // }
+    if (isError) {
+        ProductOverviewContent = <img className="w-96 m-10" src='https://httpstatusdogs.com/img/402.jpg' alt="402" />
+    }
 
 
-    // if (true) {
-    ProductOverviewContent = data?.map((product) => {
-        if (product.images.length > 2) {
+    if (!isError && isSuccess) {
+        ProductOverviewContent = data?.map((product) => {
             let filteredTitle = product.title.replace('Sleek', '')
             return (
                 <ProductOverview key={product.id} product={product} >{filteredTitle}</ProductOverview>
             )
-        }
-    })
-    // }
+
+        })
+    }
 
     return (
         <div className="mt-8 mb-8">
