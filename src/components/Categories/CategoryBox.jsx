@@ -1,47 +1,48 @@
-import { useEffect, useRef, useState } from "react";
-import { GoChevronDown, GoChevronUp } from "react-icons/go"
-import DropdownPanel from "./DropdownPanel";
+// import { useEffect, useRef, useState } from "react";
+import { GoChevronRight } from "react-icons/go"
+// import DropdownPanel from "./DropdownPanel";
 
-const Categories = ({ children, options }) => {
-    const [dropOn, setDropOn] = useState(false)
-    const dropRef = useRef(null)
+const Categories = ({ children }) => {
+    // const [dropOn, setDropOn] = useState(false)
+    // const dropRef = useRef(null)
 
-    useEffect(() => {
-        const handler = (e) => {
-            if (!dropRef.current) {
-                return
-            }
-            if (!dropRef.current.contains(e.target)) {
-                setDropOn(false)
-            }
-        }
+    // useEffect(() => {
+    //     const handler = (e) => {
+    //         if (!dropRef.current) {
+    //             return
+    //         }
+    //         if (!dropRef.current.contains(e.target)) {
+    //             setDropOn(false)
+    //         }
+    //     }
 
-        document.addEventListener('click', handler, true);
-        
-        return (
-            document.removeEventListener('click', handler)
-        )
-    }, [])
+    //     document.addEventListener('click', handler, true);
 
-    const handleClick = () => {
-        setDropOn(curr => !curr)
-    }
+    //     return (
+    //         document.removeEventListener('click', handler)
+    //     )
+    // }, [])
 
-    const content = options.map((product, i) => {
-        return (
-            <DropdownPanel key={i}>{product}</DropdownPanel>
-        )
-    })
+    // const handleClick = () => {
+    //     setDropOn(curr => !curr)
+    // }
+
+    // const content = options.map((product, i) => {
+    //     return (
+    //         <DropdownPanel key={i}>{product}</DropdownPanel>
+    //     )
+    // })
 
     return (
-        <div ref={dropRef}>
-            <div className="select-none flex flex-row justify-between items-center text-gray-950 font-light text-sm bg-gray-100 bg-opacity-50 p-0.5 pl-3 pr-3 m-1 rounded-full outline-none border-none gap-1" onClick={handleClick}>
+        <div> {/*ref={dropRef}> */}
+            <div className="group select-none flex flex-row justify-between items-center text-slate-300 font-light text-base bg-gray-700 bg-opacity-70 p-1 pl-3 pr-3 m-1 rounded-full outline-none border-none gap-1 hover:shadow-full hover:shadow-indigo-500/50">
                 {children}
-                {dropOn ? <GoChevronUp /> : <GoChevronDown />}
+                <GoChevronRight className="transition ease-in-out delay-150 group-hover:translate-x-1 group-hover:scale-110  duration-150 group-hover:shadow-full group-hover:shadow-fuchsia-500/50"/>
+                {/* {dropOn ? <GoChevronUp /> : <GoChevronDown />} */}
             </div>
-            <div className="w-40 relative left-10 bg-opacity-10 bg-gray-100 rounded-2xl">
+            {/* <div className="absolute bg-opacity-30 bg-gray-800 rounded-2xl">
                 {dropOn && content}
-            </div>
+            </div> */}
         </div>
     )
 }

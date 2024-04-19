@@ -47,6 +47,7 @@ const BannerSlider = ({ data }) => {
                 <img className="select-none border-none outline-none rounded-3xl" src={product.link} alt={product.name} />
                 <Link 
                     to={product.route}
+                    key={product.id}
                     className={`flex flex-row justify-between items-center absolute bottom-8 right-16 p-1 pr-2 pl-2 text-lg rounded-xl font-normal text-white bg-gray-900 bg-opacity-50 outline-none shadow-full shadow-gray-100/50`}
                 >
                     Buy now
