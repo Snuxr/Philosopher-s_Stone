@@ -1,5 +1,5 @@
 import BannerSlider from "../Components/Banners/BannerSlider"
-import CategoryBox from "../Components/Categories/CategoryBox"
+import CategoryList from "../Components/Categories/CategoryList"
 import ProductOverview from "../Components/Products/ProductOverview"
 import { useFetchProductsQuery } from "../store"
 
@@ -53,36 +53,7 @@ const Home = () => {
         },
     ]
 
-    const Categories = [
-        {
-            id: 1,
-            title: 'Clothes',
-        },
-        {
-            id: 2,
-            title: "Electronics",
-        },
-        {
-            id: 3,
-            title: "Furniture",
-        },
-        {
-            id: 4,
-            title: "Shoes",
-        },
-        {
-            id: 5,
-            title: "Miscellaneous",
-        }
-    ]
-
     const { data, isError, isSuccess } = useFetchProductsQuery()
-
-    const CategoryBoxContent = Categories.map((category) => {
-        return (
-            <CategoryBox key={category.id} >{category.title}</CategoryBox>
-        )
-    })
 
     let ProductOverviewContent;
 
@@ -108,7 +79,7 @@ const Home = () => {
                 <BannerSlider data={rightBanner_Data} />
             </div>
             <div className="flex flex-col m-6 gap-8 items-center">
-                <div className="flex flex-row items-center gap-2">{CategoryBoxContent}</div>
+                <CategoryList />
                 <div className="flex flex-row flex-wrap justify-start gap-8">{ProductOverviewContent}</div>
             </div>
         </div>
