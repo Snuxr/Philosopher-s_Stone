@@ -23,21 +23,9 @@
   ],
   "products": [
     {
-      "id": 1,
-      "title": "Nuevo titulo",
-      "price": 100000000,
-      "description": "Elevate your wardrobe with this stylish black t-shirt featuring a striking monochrome mountain range graphic. Perfect for those who love the outdoors or want to add a touch of nature-inspired design to their look, this tee is crafted from soft, breathable fabric ensuring all-day comfort. Ideal for casual outings or as a unique gift, this t-shirt is a versatile addition to any collection.",
-      "images": [
-        "[\"https://i.imgur.com/QkIa5tT.jpeg\"",
-        "\"https://i.imgur.com/jb5Yu0h.jpeg\"",
-        "\"https://i.imgur.com/UlxxXyG.jpeg\"]"
-      ],
-      "category": "Clothes"
-    },
-    {
       "id": 2,
       "title": "Classic Red Pullover Hoodie",
-      "price": 10,
+      "price": 100,
       "description": "Elevate your casual wardrobe with our Classic Red Pullover Hoodie. Crafted with a soft cotton blend for ultimate comfort, this vibrant red hoodie features a kangaroo pocket, adjustable drawstring hood, and ribbed cuffs for a snug fit. The timeless design ensures easy pairing with jeans or joggers for a relaxed yet stylish look, making it a versatile addition to your everyday attire.",
       "images": [
         "https://i.imgur.com/1twoaDy.jpeg",
@@ -202,136 +190,6 @@
       "category": "Clothes"
     },
     {
-      "id": 52,
-      "title": "testProduct",
-      "price": 10,
-      "description": "kgjyg",
-      "images": [
-        "[\"https://placeimg.com/640/480/any\"]"
-      ],
-      "category": "Clothes"
-    },
-    {
-      "id": 53,
-      "title": "testProduct",
-      "price": 10,
-      "description": "kgjyg",
-      "images": [
-        "[\"https://placeimg.com/640/480/any\"]"
-      ],
-      "category": "Clothes"
-    },
-    {
-      "id": 54,
-      "title": "testProduct",
-      "price": 10,
-      "description": "kgjyg",
-      "images": [
-        "[\"https://placeimg.com/640/480/any\"]"
-      ],
-      "category": "Clothes"
-    },
-    {
-      "id": 55,
-      "title": "testProduct",
-      "price": 10,
-      "description": "kgjyg",
-      "images": [
-        "[\"https://placeimg.com/640/480/any\"]"
-      ],
-      "category": "Clothes"
-    },
-    {
-      "id": 57,
-      "title": "New Product",
-      "price": 10,
-      "description": "A description",
-      "images": [
-        "[\"https://placeimg.com/640/480/any\"]"
-      ],
-      "category": "Clothes"
-    },
-    {
-      "id": 58,
-      "title": "Any random product",
-      "price": 20,
-      "description": "Any random product for every ocassion",
-      "images": [
-        "[\"https://www.gef.co/dx/api/dam/custom/2023/gef/es-co/imagenes/mujeres/deportivo/abicus/566x715/jogger-mujer-abicus-azul-43815-detalle-gef.jpg\"]"
-      ],
-      "category": "Clothes"
-    },
-    {
-      "id": 59,
-      "title": "New Product Course DDD",
-      "price": 9999,
-      "description": "New product ddd",
-      "images": [
-        "[\"https://placeimg.com/640/480/any\"]"
-      ],
-      "category": "Clothes"
-    },
-    {
-      "id": 60,
-      "title": "New Product",
-      "price": 10,
-      "description": "2",
-      "images": [
-        "[\"https://placeimg.com/640/480/any\"]"
-      ],
-      "category": "Clothes"
-    },
-    {
-      "id": 61,
-      "title": "A",
-      "price": 200,
-      "description": "C",
-      "images": [
-        "[\"https://images.unsplash.com/photo-1682686581854-5e71f58e7e3f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=600&q=60\"]"
-      ],
-      "category": "Clothes"
-    },
-    {
-      "id": 62,
-      "title": "A",
-      "price": 200,
-      "description": "C",
-      "images": [
-        "[\"https://images.unsplash.com/photo-1682686581854-5e71f58e7e3f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=600&q=60\"]"
-      ],
-      "category": "Clothes"
-    },
-    {
-      "id": 63,
-      "title": "A",
-      "price": 200,
-      "description": "C",
-      "images": [
-        "[\"https://images.unsplash.com/photo-1682686581854-5e71f58e7e3f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=600&q=60\"]"
-      ],
-      "category": "Clothes"
-    },
-    {
-      "id": 64,
-      "title": "mouse logitech B100",
-      "price": 65000,
-      "description": "asesories",
-      "images": [
-        "[\"https://placeimg.com/640/480/any\"]"
-      ],
-      "category": "Clothes"
-    },
-    {
-      "id": 65,
-      "title": "new clothes,",
-      "price": 15,
-      "description": "new clothes,",
-      "images": [
-        "[\"https://upload.wikimedia.org/wikipedia/commons/8/84/Yandex.Browser_icon.svg\"]"
-      ],
-      "category": "Clothes"
-    },
-    {
       "id": 18,
       "title": "Sleek White & Orange Wireless Gaming Controller",
       "price": 69,
@@ -416,16 +274,6 @@
       "category": "Electronics"
     },
     {
-      "id": 66,
-      "title": "seytek",
-      "price": 110,
-      "description": "its very pretty",
-      "images": [
-        "[\"https://png.pngtree.com/thumb_back/fw800/background/20230527/pngtree-phoenix-bird-in-flames-wallpapers-wallpapershd-image_2697352.jpg\"]"
-      ],
-      "category": "Electronics"
-    },
-    {
       "id": 28,
       "title": "Sleek Modern Leather Sofa",
       "price": 53,
@@ -455,9 +303,9 @@
       "price": 66,
       "description": "Elevate your dining space with this luxurious table, featuring a sturdy golden metal base with an intricate rod design that provides both stability and chic elegance. The smooth stone top in a sleek round shape offers a robust surface for your dining pleasure. Perfect for both everyday meals and special occasions, this table easily complements any modern or glam decor.",
       "images": [
-        "[\"https://i.imgur.com/NWIJKUj.jpeg\"",
-        "\"https://i.imgur.com/Jn1YSLk.jpeg\"",
-        "\"https://i.imgur.com/VNZRvx5.jpeg\"]"
+        "https://i.imgur.com/NWIJKUj.jpeg",
+        "https://i.imgur.com/Jn1YSLk.jpeg",
+        "https://i.imgur.com/VNZRvx5.jpeg"
       ],
       "category": "Furniture"
     },
@@ -505,16 +353,6 @@
       "images": [
         "https://i.imgur.com/3dU0m72.jpeg",
         "https://i.imgur.com/zPU3EVa.jpeg"
-      ],
-      "category": "Furniture"
-    },
-    {
-      "id": 56,
-      "title": "Hola",
-      "price": 100,
-      "description": "Si",
-      "images": [
-        "[\"https://images.pexels.com/photos/1000084/pexels-photo-1000084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1\"]"
       ],
       "category": "Furniture"
     },
@@ -620,9 +458,9 @@
       "price": 17,
       "description": "Step into sophistication with our Elegant Purple Leather Loafers, perfect for making a bold statement. Crafted from high-quality leather with a vibrant purple finish, these shoes feature a classic loafer silhouette that's been updated with a contemporary twist. The comfortable slip-on design and durable soles ensure both style and functionality for the modern man.",
       "images": [
-        "[\"https://i.imgur.com/Au8J9sX.jpeg\"",
-        "\"https://i.imgur.com/gdr8BW2.jpeg\"",
-        "\"https://i.imgur.com/KDCZxnJ.jpeg\"]"
+        "https://i.imgur.com/Au8J9sX.jpeg",
+        "https://i.imgur.com/gdr8BW2.jpeg",
+        "https://i.imgur.com/KDCZxnJ.jpeg"
       ],
       "category": "Shoes"
     },
