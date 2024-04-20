@@ -7,10 +7,12 @@ export default {
   theme: {
     extend: {
       width: {
-        'cover':'98%'
+        'cover':'98%',
+        'prodImg': '224px'
       },
       height: {
-        'cover':'98%'
+        'cover':'98%',
+        'prodImg': '224px'
       },
       boxShadow: {
         'full': '1px 1px 30px 1px'

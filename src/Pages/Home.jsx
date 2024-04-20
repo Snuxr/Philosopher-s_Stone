@@ -107,8 +107,8 @@ const Home = () => {
                 <BannerSlider data={leftBanner_Data} />
                 <BannerSlider data={rightBanner_Data} />
             </div>
-            <div className="flex flex-col m-6 gap-8">
-                <div className="flex flex-row">{CategoryBoxContent}</div>
+            <div className="flex flex-col m-6 gap-8 items-center">
+                <div className="flex flex-row items-center gap-2">{CategoryBoxContent}</div>
                 <div className="flex flex-row flex-wrap justify-start gap-8">{ProductOverviewContent}</div>
             </div>
         </div>
