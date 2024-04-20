@@ -2,11 +2,11 @@ import classnames from "classnames";
 import useNavigation from "../../Hooks/useNavigation";
 
 const Link = ({ to, children, className, activeClassName }) => {
-    const { navigate, currentPath } = useNavigation()
+    const { navigate, currPath } = useNavigation()
 
     const classes = classnames(
         className,
-        currentPath === to && activeClassName
+        currPath === to && activeClassName
         )
 
     const handleClick = (e) => {
