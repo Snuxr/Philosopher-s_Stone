@@ -10,7 +10,7 @@ const productApi = createApi({
             fetchProducts: builder.query({
                 query: () => {
                     return {
-                        url: '/products?_limit=7',
+                        url: '/products?_limit=5',
                         method: 'GET'
                     }
                 }

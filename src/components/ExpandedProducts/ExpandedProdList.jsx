@@ -1,16 +1,30 @@
-import { useFetchProductsQuery } from "../../store";
+import { useDispatch, useSelector } from "react-redux";
+import { AddManyProducts, useFetchProductsQuery } from "../../store";
 import ExpandedProd from "./ExpandedProd"
+import { useEffect } from "react";
 
 const ExpandedProdList = () => {
+    const dispatch = useDispatch()
+    const { products } = useSelector((state) => {
+        return state.prodCateSlice
+    })
+
     const {data, isError, isSuccess} = useFetchProductsQuery()
     
     let ExpandedProdContent;
 
     if(isError) {
-        return 
+        ExpandedProdContent = <img className="w-96 m-10" src='https://httpstatusdogs.com/img/402.jpg' alt="402" />
     }
+
+    useEffect(() => {
+        if(!isError && isSuccess) {
+            dispatch(AddManyProducts(data))
+        }
+    },[dispatch, data])
+
     if(!isError && isSuccess) {
-        ExpandedProdContent = data.map((product) => {
+        ExpandedProdContent = products?.map((product) => {
             return <ExpandedProd key={product.id} product={product}/>
         })
     }
