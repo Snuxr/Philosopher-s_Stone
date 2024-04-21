@@ -13,7 +13,7 @@ const CategoryList = () => {
     if (!isError && isSuccess) {
         CategoryBoxContent = data.map((category) => {
             return (
-                <CategoryBox key={category.id} className="flex flex-row gap-2">{category.title}</CategoryBox>
+                <CategoryBox key={category.id} to={`/categories/${category.title}`} className="flex flex-row gap-2">{category.title}</CategoryBox>
             )
         })
     }
