@@ -1,9 +1,15 @@
+import { useDispatch, useSelector } from "react-redux"
 import BannerSlider from "../Components/Banners/BannerSlider"
 import CategoryList from "../Components/Categories/CategoryList"
 import ProductOverview from "../Components/Products/ProductOverview"
-import { useFetchProductsQuery } from "../store"
+import { AddManyProducts, useFetchProductsQuery } from "../store"
+import { useEffect } from "react"
 
 const Home = () => {
+    const dispatch = useDispatch()
+    const { products } = useSelector((state) => {
+        return state.prodCateSlice
+    })
 
     const leftBanner_Data = [
         {
@@ -61,9 +67,14 @@ const Home = () => {
         ProductOverviewContent = <img className="w-96 m-10" src='https://httpstatusdogs.com/img/402.jpg' alt="402" />
     }
 
+    useEffect(() => {
+        if(!isError && isSuccess) {
+            dispatch(AddManyProducts(data))
+        }
+    },[dispatch, data])
 
     if (!isError && isSuccess) {
-        ProductOverviewContent = data?.map((product) => {
+        ProductOverviewContent = products?.map((product) => {
             let filteredTitle = product.title.replace('Sleek', '')
             return (
                 <ProductOverview key={product.id} product={product} >{filteredTitle}</ProductOverview>
