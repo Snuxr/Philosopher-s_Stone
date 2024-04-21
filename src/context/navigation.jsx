@@ -4,6 +4,11 @@ const NavigationContext = createContext();
 
 const NavigationProvider = ({ children }) => {
     const [currPath, setCurrPath] = useState(window.location.pathname)
+    const [categoryPath, setCategoryPath] = useState('')
+    
+    const handleCategoryPath = (path) => {
+        setCategoryPath(path)
+    }
 
     useEffect(() => {
         const handler = () => {
@@ -22,7 +27,14 @@ const NavigationProvider = ({ children }) => {
         setCurrPath(to)
     }
 
-    return <NavigationContext.Provider value={{currPath, navigate}}>
+    const contextValue = {
+        currPath,
+        categoryPath,
+        navigate,
+        handleCategoryPath
+    }
+
+    return <NavigationContext.Provider value={contextValue}>
         {children}
     </NavigationContext.Provider>
 }

@@ -1,8 +1,9 @@
 // import { useEffect, useRef, useState } from "react";
 import { GoChevronRight } from "react-icons/go"
+import Link from "../Utils/Link";
 // import DropdownPanel from "./DropdownPanel";
 
-const CategoryBox = ({children}) => {
+const CategoryBox = ({children, to}) => {
     // const [dropOn, setDropOn] = useState(false)
     // const dropRef = useRef(null)
 
@@ -35,11 +36,11 @@ const CategoryBox = ({children}) => {
 
     return (
         <div> {/*ref={dropRef}> */}
-            <div className="group select-none flex flex-row justify-between items-center text-slate-300 font-light text-base bg-gray-700 bg-opacity-70 p-1 pl-3 pr-3 m-1 rounded-full outline-none border-none gap-2 hover:shadow-full hover:shadow-indigo-500/50 ">
+            <Link to={to} className="group select-none flex flex-row justify-between items-center text-slate-300 font-light text-base bg-gray-700 bg-opacity-70 p-1 pl-3 pr-3 m-1 rounded-full outline-none border-none gap-2 hover:shadow-full hover:shadow-indigo-500/50 ">
                 {children}
                 <GoChevronRight className="transition ease-in-out delay-150 group-hover:translate-x-1 group-hover:scale-110  duration-150 group-hover:shadow-full group-hover:shadow-fuchsia-500/50"/>
                 {/* {dropOn ? <GoChevronUp /> : <GoChevronDown />} */}
-            </div>
+            </Link>
             {/* <div className="absolute bg-opacity-30 bg-gray-800 rounded-2xl">
                 {dropOn && content}
             </div> */}
