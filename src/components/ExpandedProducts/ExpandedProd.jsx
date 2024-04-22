@@ -9,7 +9,7 @@ const ExpandedProd = ({ product }) => {
             <div className="flex flex-col justify-between pr-2 pl-2 ">
                 <div className="flex flex-col gap-2">
                     <div className="text-gray-100 text-lg font-semibold p-1">
-                        {product.title}
+                        {product.name}
                         <div className="line-clamp-2 text-gray-200 font-thin text-xs pt-2">
                             {product.description}
                         </div>

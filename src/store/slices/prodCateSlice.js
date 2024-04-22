@@ -10,19 +10,19 @@ const prodCateSlice = createSlice({
             },
             {
                 id: 2,
-                title: "Electronics"
+                title: "Dope"
             },
             {
                 id: 3,
-                title: "Furniture"
+                title: "Electronics"
             },
             {
                 id: 4,
-                title: "Shoes"
+                title: "Furniture"
             },
             {
                 id: 5,
-                title: "Miscellaneous"
+                title: "Shoes"
             }
         ],
         products: []

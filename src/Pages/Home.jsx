@@ -75,7 +75,7 @@ const Home = () => {
 
     if (!isError && isSuccess) {
         ProductOverviewContent = products?.map((product) => {
-            let filteredTitle = product.title.replace('Sleek', '')
+            let filteredTitle = product.name.replace('Sleek', '')
             return (
                 <ProductOverview key={product.id} product={product} >{filteredTitle}</ProductOverview>
             )
