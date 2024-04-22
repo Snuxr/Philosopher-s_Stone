@@ -2,7 +2,7 @@ import classnames from "classnames";
 import useNavigation from "../../Hooks/useNavigation";
 
 const Link = ({ to, children, className, activeClassName }) => {
-    const { navigate, currPath, handleCategoryPath } = useNavigation()
+    const { navigate, currPath } = useNavigation()
 
     const classes = classnames(
         className,
@@ -14,10 +14,6 @@ const Link = ({ to, children, className, activeClassName }) => {
             return;
         }
         e.preventDefault()
-
-        if (to.includes('categories')) {
-            handleCategoryPath(to)
-        }
         navigate(to)
     }
     return <a href={to} onClick={handleClick} className={classes}>{children}</a>
