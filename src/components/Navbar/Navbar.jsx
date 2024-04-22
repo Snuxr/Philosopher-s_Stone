@@ -20,7 +20,7 @@ const NavBar = () => {
     })
     return (
         <div className="flex flex-row text-slate-300 items-center justify-between p-1 gap-2 m-1">
-            <label className="font-extralight text-3xl rounded-lg shadow-full shadow-indigo-500/90 p-1 ">Snuxr</label>
+            <label id="logo" className="font-extralight text-3xl rounded-lg tracking-wider p-1 ">Snuxr</label>
             <SearchInput />
             <div className="flex gap-7">
                 {content}
