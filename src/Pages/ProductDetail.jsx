@@ -1,5 +1,5 @@
 import CategoryList from "../Components/Categories/CategoryList";
-import ProductSlider from "../Components/Utils/productSlider";
+import ProductSlider from "../Components/Utils/ProductSlider";
 
 const ProductDetail = ({ product }) => {
     return (
