@@ -8,11 +8,13 @@ export default {
     extend: {
       width: {
         'cover':'98%',
-        'prodImg': '224px'
+        'prodImg': '224px',
+        'mainImg': '600px'
       },
       height: {
         'cover':'98%',
-        'prodImg': '224px'
+        'prodImg': '224px',
+        'mainImg': '600px'
       },
       boxShadow: {
         'full': '1px 1px 30px 1px'
