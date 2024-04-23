@@ -3,9 +3,10 @@ import Link from "../Utils/Link";
 
 const NavBar = () => {
     const NavLinks = [
-        { id:1, label: 'Deals', path: '/deals' },
-        { id:2, label: 'Cart', path: '/cart' },
-        { id:3, label: 'Orders', path: '/orders' }
+        { id:1, label: 'Home', path: '/' },
+        { id:2, label: 'Deals', path: '/deals' },
+        { id:3, label: 'Cart', path: '/cart' },
+        { id:4, label: 'Orders', path: '/orders' }
     ]
     const content = NavLinks.map((link) => {
         return (
@@ -19,10 +20,10 @@ const NavBar = () => {
         )
     })
     return (
-        <div className="flex flex-row text-slate-300 items-center justify-between p-1 gap-2 m-1">
+        <div className="flex flex-row text-slate-300 items-center justify-between p-1 m-1">
             <label id="logo" className="font-extralight text-3xl rounded-lg tracking-wider p-1 ">Snuxr</label>
-            <SearchInput />
-            <div className="flex gap-7">
+            <div className="flex flex-row justify-between items-center gap-6">
+                <SearchInput/>
                 {content}
             </div>
         </div>
