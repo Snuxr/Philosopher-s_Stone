@@ -5,6 +5,7 @@ const Link = ({ to, children, className, activeClassName }) => {
     const { navigate, currPath } = useNavigation()
 
     const classes = classnames(
+        'cursor-default',
         className,
         currPath === to && activeClassName
     )
