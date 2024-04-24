@@ -27,7 +27,7 @@ const ProductSlider = ({data}) => {
    
     const content = data.map((image, i) => {
         return (
-            <div key={i} className='shadow-full shadow-indigo-500/50'>
+            <div key={i}>
                 <img className="select-none border-none outline-none" src={image} />
             </div>
         )
