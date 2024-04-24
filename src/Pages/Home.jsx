@@ -2,6 +2,7 @@ import { useSelector } from "react-redux"
 import BannerSlider from "../Components/Banners/BannerSlider"
 import CategoryList from "../Components/Categories/CategoryList"
 import ProductOverview from "../Components/Products/ProductOverview"
+import { MdErrorOutline } from "react-icons/md";
 
 const Home = () => {
     const { products } = useSelector((state) => {
@@ -59,16 +60,22 @@ const Home = () => {
     let ProductOverviewContent;
 
     if (products.length === 0) {
-        ProductOverviewContent = <img className="w-96 m-10" src='https://httpstatusdogs.com/img/402.jpg' alt="402" />
+        ProductOverviewContent = (
+            <div className="w-full h-full flex flex-row justify-center items-center animate-pulse gap-1 text-xl text-slate-300 opacity-70">
+                Something Went Wrong
+                <MdErrorOutline className="text-xl"/>
+            </div>
+        )
     }
 
     if (products.length !== 0) {
-        ProductOverviewContent = products?.map((product) => {
+        const newProdArr = products.slice(0, 14);
+
+        ProductOverviewContent = newProdArr?.map((product) => {
             let filteredTitle = product.name.replace('Sleek', '')
             return (
                 <ProductOverview key={product.id} product={product} >{filteredTitle}</ProductOverview>
             )
-
         })
     }
 

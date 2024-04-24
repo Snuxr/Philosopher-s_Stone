@@ -48,10 +48,10 @@ const BannerSlider = ({ data }) => {
                 <Link 
                     to={product.route}
                     key={product.id}
-                    className={`flex flex-row justify-between items-center absolute bottom-8 right-16 p-1 pr-2 pl-2 text-lg rounded-xl font-normal text-white bg-gray-900 bg-opacity-50 outline-none shadow-full shadow-gray-100/50`}
+                    className={`flex flex-row justify-between items-center absolute bottom-8 right-16 p-1 pr-2 pl-2 text-base rounded-xl font-normal text-white bg-gray-900 bg-opacity-50 outline-none shadow-full shadow-gray-100/50 hover:bg-gray-100 hover:text-gray-900 hover:shadow-full hover:shadow-gray-900`}
                 >
-                    Buy now
-                    <GoChevronRight />
+                    Shop Now
+                    <GoChevronRight className="text-xl"/>
                 </Link>
             </div>
         )
