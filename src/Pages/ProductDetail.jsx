@@ -18,7 +18,7 @@ const ProductDetail = ({ product }) => {
         )
     } else if (product) {
         productContent = (
-            <div className="grid grid-cols-9 gap-10">
+            <div className="grid grid-cols-9 gap-10 mb-20">
                 <div className="col-span-3">
                     <ProductSlider data={product.images} />
                 </div>

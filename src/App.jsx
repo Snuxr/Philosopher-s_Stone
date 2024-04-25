@@ -10,6 +10,7 @@ import { AddManyProducts, useFetchProductsQuery } from "./store";
 import { useEffect, useState } from "react";
 import ProductDetail from "./Pages/ProductDetail";
 import { MdErrorOutline } from "react-icons/md";
+import Footer from "./Components/Footer/Footer";
 
 const App = () => {
   const [loading, setLoading] = useState(true)
@@ -108,6 +109,10 @@ const App = () => {
       <div className="w-cover h-cover bg-gray-950 rounded-3xl bg-center bg-fixed bg-opacity-80 overflow-x-hidden overflow-y-auto m-2 p-4">
         <NavBar />
         {content}
+        <div className="shadow-full shadow-indigo-500/50 mt-20">
+          <hr className="border-opacity-70 border-gray-700"/>
+        </div>
+        <Footer />
       </div>
       {/* Style for hiding the scroll bar */}
       <style>
