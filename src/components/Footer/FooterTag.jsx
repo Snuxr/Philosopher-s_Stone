@@ -8,7 +8,7 @@ const FooterTags = ({children, footerPaths}) => {
     })
     return (
         <div className="flex flex-col gap-0.5 justify-start items-start">
-            <div className="font-semibold pb-2">{children}</div>
+            <div className="font-semibold mb-2">{children}</div>
             {footerContent}
         </div>
     )
