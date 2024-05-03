@@ -1,8 +1,11 @@
+import classnames from "classnames"
+import { twMerge } from 'tailwind-merge'
+
 const Button = ({children, ...rest}) => {
+  const classes = classnames(rest.className);
+
   return (
-    <div {...rest}>
-      <button className="p-2 rounded-lg text-sm font-normal text-gray-800 bg-gray-100 bg-opacity-95 hover:bg-gray-200 hover:bg-opacity-20  hover:text-gray-100 shadow-full shadow-indigo-500/50">{children}</button>
-    </div>
+      <button {...rest} className={twMerge("p-2 rounded-lg text-sm font-normal text-slate-300 bg-white bg-opacity-10 hover:bg-opacity-90 hover:text-gray-950 hover:shadow-full hover:shadow-indigo-500/50", classes)}>{children}</button>
   )
 }
 
