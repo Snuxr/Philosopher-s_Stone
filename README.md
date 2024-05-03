@@ -1,6 +1,6 @@
 # Getting Started with Snuxr
-Snuxr is a [React](https://react.dev/) E-commerce application that helps users buy and sell items online. Please note that this project is currently under development and is subject to change frequently.
-### To run Snuxr, you'll need to have Node.js installed on your machine. You can download [Node.js](https://nodejs.org/en/) from the official website.
+[Snuxr](https://github.com/Snuxr) is a [React](https://react.dev) E-commerce application that helps users buy and sell items online. Please note that this project is currently under development and is subject to change frequently.
+### To run Snuxr, you'll need to have Node.js installed on your machine. You can download [Node.js](https://nodejs.org/en) from the official website.
 ## Installation
 1. Clone the repository to your local machine using the following command:
 ```bash
