@@ -1,14 +1,40 @@
+import { faker  } from "@faker-js/faker"
 import { MdErrorOutline } from "react-icons/md";
 import CategoryList from "../Components/Categories/CategoryList";
 import Button from "../Components/Utils/Button";
 import ProductSlider from "../Components/Utils/ProductSlider";
+import { useDispatch } from "react-redux";
+import { useAddToCartMutation } from "../store";
+import { useEffect } from "react";
+import useNavigation from "../Hooks/useNavigation";
+import { AddToCart } from "../store";
 
 const ProductDetail = ({ product }) => {
+    const dispatch = useDispatch()
+    const { navigate } =useNavigation()
+
+    const [addToCart, results] = useAddToCartMutation()
+    
+    const handleCartClick = () => {
+        addToCart({
+            product,
+            id: faker.string.uuid()
+        })
+    }
+
+    useEffect(() => {
+        if(!results.isError && results.isSuccess) {
+            dispatch(AddToCart(results.data))
+            navigate('/cart')
+        }
+
+    },[dispatch, results.data])
+
     const newDates = new Date()
     newDates.setDate(newDates.getDate() + 3)
     const datesArr = newDates.toString().split(' ')
-    let productContent;
 
+    let productContent;
     if (!product) {
         productContent = (
             <div className="w-full h-full flex flex-row justify-center items-center animate-pulse gap-1 text-xl text-slate-300 opacity-70">
@@ -37,7 +63,7 @@ const ProductDetail = ({ product }) => {
                         </div>
                     </div>
                     <div className="flex flex-row gap-4">
-                        <Button>ADD TO CART</Button>
+                        <Button onClick={handleCartClick}>ADD TO CART</Button>
                         <Button>Buy Now</Button>
                     </div>
                     <div className="shadow-full shadow-indigo-500/50">
