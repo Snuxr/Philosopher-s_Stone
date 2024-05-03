@@ -1,16 +1,17 @@
 import { AiOutlineLoading } from "react-icons/ai";
+import { MdErrorOutline } from "react-icons/md";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { AddManyProducts, AddToCartAll, useFetchCartQuery, useFetchProductsQuery } from "./store";
 import NavBar from "./Components/Navbar/Navbar";
 import Home from "./Pages/Home";
 import ShowProducts from "./Pages/ShowProducts";
 import Route from "./Components/Utils/Route"
 import useNavigation from "./Hooks/useNavigation";
-import { useDispatch, useSelector } from "react-redux";
 import binarySearch from "./Hooks/binarySearch";
-import { AddManyProducts, useFetchProductsQuery } from "./store";
-import { useEffect, useState } from "react";
 import ProductDetail from "./Pages/ProductDetail";
-import { MdErrorOutline } from "react-icons/md";
 import Footer from "./Components/Footer/Footer";
+import Cart from "./Pages/Cart";
 
 const App = () => {
   const [loading, setLoading] = useState(true)
@@ -21,21 +22,29 @@ const App = () => {
 
   const { currPath, navigate } = useNavigation()
 
-  const { data, isError, isSuccess } = useFetchProductsQuery()
+  const productsData = useFetchProductsQuery()
+  const cartData = useFetchCartQuery()
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false)
     }, 3000);
 
-    if (!isError && isSuccess) {
-      dispatch(AddManyProducts(data))
+    if (!productsData.isError && productsData.isSuccess) {
+      dispatch(AddManyProducts(productsData.data))
     }
 
     return () => {
       clearTimeout(timer)
     }
-  }, [dispatch, data, isError])
+  }, [dispatch, productsData.data, productsData.isError])
+
+  useEffect(() => {
+    if (!cartData.isError && cartData.isSuccess) {
+      dispatch(AddToCartAll(cartData.data))
+    }
+  }, [dispatch, cartData.data, cartData.isError])
+
 
   let categoryPath;
   let cateIndex;
@@ -88,19 +97,20 @@ const App = () => {
         </div>
       </div>
     )
-  } else if (isError) {
+  } else if (productsData.isError) {
     content = (
       <div className="w-full h-full flex flex-row justify-center items-center animate-pulse gap-1 text-xl text-slate-300 opacity-70">
         Something Went Wrong
         <MdErrorOutline className="text-xl" />
       </div>
     )
-  } else if (!loading && isSuccess) {
+  } else if (!loading && productsData.isSuccess) {
     content = (
       <div>
         <Route path='/'><Home /></Route>
         <Route path={categoryPath}><ShowProducts category={categories[cateIndex]} /></Route>
         <Route path={productPath}><ProductDetail product={productData} /></Route>
+        <Route path='/cart'><Cart/></Route>
       </div>
     )
   }
