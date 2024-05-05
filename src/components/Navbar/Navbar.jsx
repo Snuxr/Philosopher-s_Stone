@@ -13,7 +13,7 @@ const NavBar = () => {
             <Link
                 key={link.id}
                 to={link.path}
-                className='p-1 text-slate-300 text-base rounded-lg outline-none focus:shadow-full focus:shadow-indigo-500/90 hover:shadow-full hover:shadow-indigo-500/90'
+                className='p-1 text-slate-300 text-base rounded-lg hover:shadow-full hover:shadow-indigo-500/90'
             >
                 {link.label}
             </Link>
