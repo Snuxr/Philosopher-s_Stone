@@ -1,24 +1,224 @@
 {
-  "categories": [
+  "orders": [
     {
-      "id": "1",
-      "title": "Clothes"
+      "id": "6ac6793d-9abd-4691-9c64-7d22ad6fbad7",
+      "product": {
+        "id": "108acfa0-cde6-4f22-a6a8-2ea701d11b03",
+        "name": "Classic Black Hooded Sweatshirt",
+        "price": 79,
+        "description": "Elevate your casual wardrobe with our Classic Black Hooded Sweatshirt. Made from high-quality, soft fabric that ensures comfort and durability, this hoodie features a spacious kangaroo pocket and an adjustable drawstring hood. Its versatile design makes it perfect for a relaxed day at home or a casual outing.",
+        "images": [
+          "https://i.imgur.com/cSytoSD.jpeg",
+          "https://i.imgur.com/WwKucXb.jpeg",
+          "https://i.imgur.com/cE2Dxh9.jpeg"
+        ],
+        "title": "Clothes"
+      },
+      "order_placed": 1715194370135
     },
     {
-      "id": "2",
-      "title": "Dope"
+      "id": "3a5b2e11-154e-408d-a98f-54289286d7d4",
+      "product": {
+        "id": "108acfa0-cde6-4f22-a6a8-2ea701d11b03",
+        "name": "Classic Black Hooded Sweatshirt",
+        "price": 79,
+        "description": "Elevate your casual wardrobe with our Classic Black Hooded Sweatshirt. Made from high-quality, soft fabric that ensures comfort and durability, this hoodie features a spacious kangaroo pocket and an adjustable drawstring hood. Its versatile design makes it perfect for a relaxed day at home or a casual outing.",
+        "images": [
+          "https://i.imgur.com/cSytoSD.jpeg",
+          "https://i.imgur.com/WwKucXb.jpeg",
+          "https://i.imgur.com/cE2Dxh9.jpeg"
+        ],
+        "title": "Clothes"
+      },
+      "order_placed": 1715194383368
     },
     {
-      "id": "3",
-      "title": "Electronics"
+      "id": "29e6a385-64ff-481b-9a93-d6855334e5e9",
+      "product": {
+        "id": "ab6ff5be-fd90-4168-a076-b44774db4595",
+        "name": "Classic Grey Hooded Sweatshirt",
+        "price": 90,
+        "description": "Elevate your casual wear with our Classic Grey Hooded Sweatshirt. Made from a soft cotton blend, this hoodie features a front kangaroo pocket, an adjustable drawstring hood, and ribbed cuffs for a snug fit. Perfect for those chilly evenings or lazy weekends, it pairs effortlessly with your favorite jeans or joggers.",
+        "images": [
+          "https://i.imgur.com/R2PN9Wq.jpeg",
+          "https://i.imgur.com/IvxMPFr.jpeg",
+          "https://i.imgur.com/7eW9nXP.jpeg"
+        ],
+        "title": "Clothes"
+      },
+      "order_placed": 1715194399177
     },
     {
-      "id": "4",
-      "title": "Furniture"
+      "id": "4cc13e22-c9c5-48a1-8c2a-ad1553e4dfb7",
+      "product": {
+        "id": "ab6ff5be-fd90-4168-a076-b44774db4595",
+        "name": "Classic Grey Hooded Sweatshirt",
+        "price": 90,
+        "description": "Elevate your casual wear with our Classic Grey Hooded Sweatshirt. Made from a soft cotton blend, this hoodie features a front kangaroo pocket, an adjustable drawstring hood, and ribbed cuffs for a snug fit. Perfect for those chilly evenings or lazy weekends, it pairs effortlessly with your favorite jeans or joggers.",
+        "images": [
+          "https://i.imgur.com/R2PN9Wq.jpeg",
+          "https://i.imgur.com/IvxMPFr.jpeg",
+          "https://i.imgur.com/7eW9nXP.jpeg"
+        ],
+        "title": "Clothes"
+      },
+      "order_placed": 1715194756649
     },
     {
-      "id": "5",
-      "title": "Shoes"
+      "id": "925f8609-3f53-4757-8d3d-15ea6c07dfb4",
+      "product": {
+        "id": "108acfa0-cde6-4f22-a6a8-2ea701d11b03",
+        "name": "Classic Black Hooded Sweatshirt",
+        "price": 79,
+        "description": "Elevate your casual wardrobe with our Classic Black Hooded Sweatshirt. Made from high-quality, soft fabric that ensures comfort and durability, this hoodie features a spacious kangaroo pocket and an adjustable drawstring hood. Its versatile design makes it perfect for a relaxed day at home or a casual outing.",
+        "images": [
+          "https://i.imgur.com/cSytoSD.jpeg",
+          "https://i.imgur.com/WwKucXb.jpeg",
+          "https://i.imgur.com/cE2Dxh9.jpeg"
+        ],
+        "title": "Clothes"
+      },
+      "order_placed": 1715194771315
+    },
+    {
+      "id": "06b889b7-a51b-45a2-88b3-3dd01381df55",
+      "product": {
+        "id": "108acfa0-cde6-4f22-a6a8-2ea701d11b03",
+        "name": "Classic Black Hooded Sweatshirt",
+        "price": 79,
+        "description": "Elevate your casual wardrobe with our Classic Black Hooded Sweatshirt. Made from high-quality, soft fabric that ensures comfort and durability, this hoodie features a spacious kangaroo pocket and an adjustable drawstring hood. Its versatile design makes it perfect for a relaxed day at home or a casual outing.",
+        "images": [
+          "https://i.imgur.com/cSytoSD.jpeg",
+          "https://i.imgur.com/WwKucXb.jpeg",
+          "https://i.imgur.com/cE2Dxh9.jpeg"
+        ],
+        "title": "Clothes"
+      },
+      "order_placed": 1715194781229
+    },
+    {
+      "id": "b9580258-5023-4af6-b61f-11bb5b5f4865",
+      "product": {
+        "id": "7d937cca-1979-4b2d-afc8-34d099ebf1d5",
+        "name": "Classic Red Pullover Hoodie",
+        "price": 100,
+        "description": "Elevate your casual wardrobe with our Classic Red Pullover Hoodie. Crafted with a soft cotton blend for ultimate comfort, this vibrant red hoodie features a kangaroo pocket, adjustable drawstring hood, and ribbed cuffs for a snug fit. The timeless design ensures easy pairing with jeans or joggers for a relaxed yet stylish look, making it a versatile addition to your everyday attire.",
+        "images": [
+          "https://i.imgur.com/1twoaDy.jpeg",
+          "https://i.imgur.com/FDwQgLy.jpeg",
+          "https://i.imgur.com/kg1ZhhH.jpeg"
+        ],
+        "title": "Clothes"
+      },
+      "order_placed": 1715194789610
+    },
+    {
+      "id": "09171abe-2d25-4dbc-a76e-35b506c6b12c",
+      "product": {
+        "id": "7d937cca-1979-4b2d-afc8-34d099ebf1d5",
+        "name": "Classic Red Pullover Hoodie",
+        "price": 100,
+        "description": "Elevate your casual wardrobe with our Classic Red Pullover Hoodie. Crafted with a soft cotton blend for ultimate comfort, this vibrant red hoodie features a kangaroo pocket, adjustable drawstring hood, and ribbed cuffs for a snug fit. The timeless design ensures easy pairing with jeans or joggers for a relaxed yet stylish look, making it a versatile addition to your everyday attire.",
+        "images": [
+          "https://i.imgur.com/1twoaDy.jpeg",
+          "https://i.imgur.com/FDwQgLy.jpeg",
+          "https://i.imgur.com/kg1ZhhH.jpeg"
+        ],
+        "title": "Clothes"
+      },
+      "order_placed": 1715194796523
+    }
+  ],
+  "cart": [
+    {
+      "id": "fceec0d1-42b3-497e-be6c-eb2f0597cdca",
+      "product": {
+        "id": "7d937cca-1979-4b2d-afc8-34d099ebf1d5",
+        "name": "Classic Red Pullover Hoodie",
+        "price": 100,
+        "description": "Elevate your casual wardrobe with our Classic Red Pullover Hoodie. Crafted with a soft cotton blend for ultimate comfort, this vibrant red hoodie features a kangaroo pocket, adjustable drawstring hood, and ribbed cuffs for a snug fit. The timeless design ensures easy pairing with jeans or joggers for a relaxed yet stylish look, making it a versatile addition to your everyday attire.",
+        "images": [
+          "https://i.imgur.com/1twoaDy.jpeg",
+          "https://i.imgur.com/FDwQgLy.jpeg",
+          "https://i.imgur.com/kg1ZhhH.jpeg"
+        ],
+        "title": "Clothes"
+      }
+    },
+    {
+      "id": "a0c4d9c3-a3d1-4e6b-b846-fda743bff255",
+      "product": {
+        "id": "ab6ff5be-fd90-4168-a076-b44774db4595",
+        "name": "Classic Grey Hooded Sweatshirt",
+        "price": 90,
+        "description": "Elevate your casual wear with our Classic Grey Hooded Sweatshirt. Made from a soft cotton blend, this hoodie features a front kangaroo pocket, an adjustable drawstring hood, and ribbed cuffs for a snug fit. Perfect for those chilly evenings or lazy weekends, it pairs effortlessly with your favorite jeans or joggers.",
+        "images": [
+          "https://i.imgur.com/R2PN9Wq.jpeg",
+          "https://i.imgur.com/IvxMPFr.jpeg",
+          "https://i.imgur.com/7eW9nXP.jpeg"
+        ],
+        "title": "Clothes"
+      }
+    },
+    {
+      "id": "cafa8b49-ee7e-4116-8588-d4bed6f4216b",
+      "product": {
+        "id": "108acfa0-cde6-4f22-a6a8-2ea701d11b03",
+        "name": "Classic Black Hooded Sweatshirt",
+        "price": 79,
+        "description": "Elevate your casual wardrobe with our Classic Black Hooded Sweatshirt. Made from high-quality, soft fabric that ensures comfort and durability, this hoodie features a spacious kangaroo pocket and an adjustable drawstring hood. Its versatile design makes it perfect for a relaxed day at home or a casual outing.",
+        "images": [
+          "https://i.imgur.com/cSytoSD.jpeg",
+          "https://i.imgur.com/WwKucXb.jpeg",
+          "https://i.imgur.com/cE2Dxh9.jpeg"
+        ],
+        "title": "Clothes"
+      }
+    },
+    {
+      "id": "f2340a83-3d66-4253-87b8-888234f69635",
+      "product": {
+        "id": "7d937cca-1979-4b2d-afc8-34d099ebf1d5",
+        "name": "Classic Red Pullover Hoodie",
+        "price": 100,
+        "description": "Elevate your casual wardrobe with our Classic Red Pullover Hoodie. Crafted with a soft cotton blend for ultimate comfort, this vibrant red hoodie features a kangaroo pocket, adjustable drawstring hood, and ribbed cuffs for a snug fit. The timeless design ensures easy pairing with jeans or joggers for a relaxed yet stylish look, making it a versatile addition to your everyday attire.",
+        "images": [
+          "https://i.imgur.com/1twoaDy.jpeg",
+          "https://i.imgur.com/FDwQgLy.jpeg",
+          "https://i.imgur.com/kg1ZhhH.jpeg"
+        ],
+        "title": "Clothes"
+      }
+    },
+    {
+      "id": "9a06a495-d471-44e1-b291-b449280ca765",
+      "product": {
+        "id": "108acfa0-cde6-4f22-a6a8-2ea701d11b03",
+        "name": "Classic Black Hooded Sweatshirt",
+        "price": 79,
+        "description": "Elevate your casual wardrobe with our Classic Black Hooded Sweatshirt. Made from high-quality, soft fabric that ensures comfort and durability, this hoodie features a spacious kangaroo pocket and an adjustable drawstring hood. Its versatile design makes it perfect for a relaxed day at home or a casual outing.",
+        "images": [
+          "https://i.imgur.com/cSytoSD.jpeg",
+          "https://i.imgur.com/WwKucXb.jpeg",
+          "https://i.imgur.com/cE2Dxh9.jpeg"
+        ],
+        "title": "Clothes"
+      }
+    },
+    {
+      "id": "d55057e7-3bca-4b30-8422-0ca9686998c6",
+      "product": {
+        "id": "108acfa0-cde6-4f22-a6a8-2ea701d11b03",
+        "name": "Classic Black Hooded Sweatshirt",
+        "price": 79,
+        "description": "Elevate your casual wardrobe with our Classic Black Hooded Sweatshirt. Made from high-quality, soft fabric that ensures comfort and durability, this hoodie features a spacious kangaroo pocket and an adjustable drawstring hood. Its versatile design makes it perfect for a relaxed day at home or a casual outing.",
+        "images": [
+          "https://i.imgur.com/cSytoSD.jpeg",
+          "https://i.imgur.com/WwKucXb.jpeg",
+          "https://i.imgur.com/cE2Dxh9.jpeg"
+        ],
+        "title": "Clothes"
+      }
     }
   ],
   "products": [
