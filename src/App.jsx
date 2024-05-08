@@ -2,7 +2,7 @@ import { AiOutlineLoading } from "react-icons/ai";
 import { MdErrorOutline } from "react-icons/md";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { AddManyProducts, AddToCartAll, useFetchCartQuery, useFetchProductsQuery } from "./store";
+import { AddAllOrders, AddManyProducts, AddToCartAll, useFetchCartQuery, useFetchOrderQuery, useFetchProductsQuery } from "./store";
 import NavBar from "./Components/Navbar/Navbar";
 import Home from "./Pages/Home";
 import ShowProducts from "./Pages/ShowProducts";
@@ -12,6 +12,7 @@ import binarySearch from "./Hooks/binarySearch";
 import ProductDetail from "./Pages/ProductDetail";
 import Footer from "./Components/Footer/Footer";
 import Cart from "./Pages/Cart";
+import Orders from "./Pages/Orders";
 
 const App = () => {
   const [loading, setLoading] = useState(true)
@@ -24,6 +25,7 @@ const App = () => {
 
   const productsData = useFetchProductsQuery()
   const cartData = useFetchCartQuery()
+  const orderData = useFetchOrderQuery()
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -44,6 +46,13 @@ const App = () => {
       dispatch(AddToCartAll(cartData.data))
     }
   }, [dispatch, cartData.data, cartData.isError])
+
+  useEffect(() => {
+    if(!orderData.isError && orderData.isSuccess) {
+      console.log(orderData.data)
+      dispatch(AddAllOrders(orderData.data))
+    }
+  },[dispatch, orderData.data, orderData.data])
 
 
   let categoryPath;
@@ -111,6 +120,7 @@ const App = () => {
         <Route path={categoryPath}><ShowProducts category={categories[cateIndex]} /></Route>
         <Route path={productPath}><ProductDetail product={productData} /></Route>
         <Route path='/cart'><Cart/></Route>
+        <Route path='/orders'><Orders /></Route>
       </div>
     )
   }
