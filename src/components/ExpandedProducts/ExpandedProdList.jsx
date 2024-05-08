@@ -21,7 +21,7 @@ const ExpandedProdList = ({ category }) => {
         })
 
         ExpandedProdContent = filteredProducts.map((product) => {
-            return <ExpandedProd key={product.id} product={product} />
+            return <ExpandedProd key={product.id} product={product} showBtn={true}/>
         })
 
         if (ExpandedProdContent[0] === undefined) {
