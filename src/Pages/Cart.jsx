@@ -1,6 +1,5 @@
 import { useSelector } from "react-redux"
 import ExpandedProd from "../Components/ExpandedProducts/ExpandedProd"
-import CategoryList from "../Components/Categories/CategoryList"
 import Button from "../Components/Utils/Button"
 
 const Cart = () => {
@@ -13,7 +12,7 @@ const Cart = () => {
 })
   return (
     <div className="mt-8 mb-8 mr-6 ml-6 flex flex-col items-center gap-16">
-      <CategoryList/>
+      <h2 className="text-3xl font-extralight">Carts</h2>
       <div className="flex flex-col items-center gap-4">
         {cartContent}
       </div>
