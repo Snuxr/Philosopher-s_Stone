@@ -1,34 +1,53 @@
-import { faker  } from "@faker-js/faker"
+import { faker } from "@faker-js/faker"
 import { MdErrorOutline } from "react-icons/md";
 import CategoryList from "../Components/Categories/CategoryList";
 import Button from "../Components/Utils/Button";
+import Line from "../Components/Utils/Line"
 import ProductSlider from "../Components/Utils/ProductSlider";
 import { useDispatch } from "react-redux";
-import { useAddToCartMutation } from "../store";
+import { AddSingleOrders, useAddToCartMutation, useCreateOrderMutation } from "../store";
 import { useEffect } from "react";
 import useNavigation from "../Hooks/useNavigation";
 import { AddToCart } from "../store";
 
 const ProductDetail = ({ product }) => {
     const dispatch = useDispatch()
-    const { navigate } =useNavigation()
+    const { navigate } = useNavigation()
 
-    const [addToCart, results] = useAddToCartMutation()
-    
+    const cartData = useAddToCartMutation()
+    const [createOrder, results] = useCreateOrderMutation()
+
     const handleCartClick = () => {
-        addToCart({
+        cartData[0]({
             product,
             id: faker.string.uuid()
         })
     }
 
+    const handleOrderClick = () => {
+        createOrder(
+            {
+                product,
+                "order_placed": Date.now(),
+                "id": faker.string.uuid()
+            },
+        )
+    }
+
     useEffect(() => {
-        if(!results.isError && results.isSuccess) {
-            dispatch(AddToCart(results.data))
+        if (!cartData[1].isError && cartData[1].isSuccess) {
+            dispatch(AddToCart(cartData[1].data))
             navigate('/cart')
         }
+    }, [dispatch, cartData[1].data])
+    
+    useEffect(() => {
+        if (!results.isError && results.isSuccess) {
+            dispatch(AddSingleOrders(results.data))
+            navigate('/orders')
+        }
 
-    },[dispatch, results.data])
+    }, [dispatch, results.data])
 
     const newDates = new Date()
     newDates.setDate(newDates.getDate() + 3)
@@ -64,11 +83,9 @@ const ProductDetail = ({ product }) => {
                     </div>
                     <div className="flex flex-row gap-4">
                         <Button onClick={handleCartClick}>ADD TO CART</Button>
-                        <Button>Buy Now</Button>
+                        <Button onClick={handleOrderClick}>Buy Now</Button>
                     </div>
-                    <div className="shadow-full shadow-indigo-500/50">
-                        <hr className="border-opacity-70 border-gray-700" />
-                    </div>
+                    <Line />
                 </div>
             </div>
         )

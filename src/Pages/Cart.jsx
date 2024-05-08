@@ -1,18 +1,19 @@
 import { useSelector } from "react-redux"
 import ExpandedProd from "../Components/ExpandedProducts/ExpandedProd"
 import Button from "../Components/Utils/Button"
+import Header from "../Components/Utils/Header"
 
 const Cart = () => {
-  const {cart} = useSelector((state) => {
+  const { cart } = useSelector((state) => {
     return state.cartSlice
   })
 
   const cartContent = cart.map((cartProd) => {
     return <ExpandedProd key={cartProd.id} product={cartProd.product} />
-})
+  })
   return (
     <div className="mt-8 mb-8 mr-6 ml-6 flex flex-col items-center gap-16">
-      <h2 id="cart" className="select-none text-2xl font-extralight p-1 rounded-lg tracking-widest">Cart</h2>
+      <Header>Cart</Header>
       <div className="flex flex-col items-center gap-4">
         {cartContent}
       </div>
