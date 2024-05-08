@@ -12,7 +12,7 @@ const Cart = () => {
 })
   return (
     <div className="mt-8 mb-8 mr-6 ml-6 flex flex-col items-center gap-16">
-      <h2 className="text-3xl font-extralight">Carts</h2>
+      <h2 id="cart" className="select-none text-2xl font-extralight p-1 rounded-lg tracking-widest">Cart</h2>
       <div className="flex flex-col items-center gap-4">
         {cartContent}
       </div>
