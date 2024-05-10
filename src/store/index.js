@@ -27,7 +27,7 @@ export const store = configureStore({
 setupListeners(store.dispatch)
 
 export { useFetchProductsQuery } from "./apis/productsApi"
-export { useFetchCartQuery, useAddToCartMutation  } from "./apis/cartApi"
+export { useFetchCartQuery, useAddToCartMutation, useDeleteCartMutation } from "./apis/cartApi"
 export { useFetchOrderQuery, useCreateOrderMutation  } from "./apis/ordersApi"
 export { AddManyProducts } from "./slices/prodCateSlice"
 export { AddToCart, AddToCartAll } from "./slices/cartSlice"
