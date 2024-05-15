@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import ExpandedProd from "./ExpandedProd"
 import { MdErrorOutline } from "react-icons/md";
+import Alert from "../Utils/Alert"
 
 const ExpandedProdList = ({ category }) => {
     const { products } = useSelector((state) => {
@@ -10,10 +11,10 @@ const ExpandedProdList = ({ category }) => {
 
     if (products.lenght === 0) {
         ExpandedProdContent = (
-            <div className="w-full h-full flex flex-row justify-center items-center animate-pulse gap-1 text-xl text-slate-300 opacity-70">
+            <Alert>
                 Something Went Wrong
                 <MdErrorOutline className="text-xl" />
-            </div>
+            </Alert>
         )
     } else if (products.lenght !== 0) {
         const filteredProducts = products?.filter((product) => {
