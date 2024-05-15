@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux"
-import { AddToCart, useAddToCartMutation } from "../../store"
+import { AddToCart, DeleteCart, useAddToCartMutation, useDeleteCartMutation } from "../../store"
 import Button from "../Utils/Button"
 import Link from "../Utils/Link"
 import { useEffect } from "react"
@@ -7,7 +7,7 @@ import { faker } from "@faker-js/faker"
 import useNavigation from "../../Hooks/useNavigation"
 import { MdClear } from "react-icons/md"
 
-const ExpandedProd = ({ product, showBtn, cartBtn, cart_id, cartDelete }) => {
+const ExpandedProd = ({ product, showBtn, cartBtn, cart_id }) => {
     const dispatch = useDispatch();
     const { navigate } = useNavigation();
 
@@ -15,7 +15,8 @@ const ExpandedProd = ({ product, showBtn, cartBtn, cart_id, cartDelete }) => {
     newDates.setDate(newDates.getDate() + 3)
     let datesArr = newDates.toString().split(' ')
 
-    const [addToCart, results] = useAddToCartMutation()
+    const [addToCart, addToCartResults] = useAddToCartMutation()
+    const [deleteCart, deleteCartResults] = useDeleteCartMutation()
 
     const handleCartClick = () => {
         addToCart({
@@ -24,12 +25,25 @@ const ExpandedProd = ({ product, showBtn, cartBtn, cart_id, cartDelete }) => {
         })
     }
 
+    const handleCartDelete = (cart_id) => {
+        deleteCart(cart_id)
+    }
+
     useEffect(() => {
-        if (!results.isError && results.isSuccess) {
-            dispatch(AddToCart(results.data))
+        if (!addToCartResults.isError && addToCartResults.isSuccess) {
+            dispatch(AddToCart(addToCartResults.data))
             navigate("/cart")
         }
-    }, [dispatch, results.data])
+    }, [dispatch, addToCartResults.data])
+
+    
+    useEffect(() => {
+        if(!deleteCartResults.isError && deleteCartResults.isSuccess) {
+            dispatch(DeleteCart(cart_id))
+          }
+    }, [dispatch, deleteCartResults.data])
+
+    
 
     return (
         <div className="w-full max-h-72 flex flex-row gap-2">
@@ -55,8 +69,8 @@ const ExpandedProd = ({ product, showBtn, cartBtn, cart_id, cartDelete }) => {
                     <div className="flex flex-row justify-end items-center gap-4 p-1 mr-4 ml-4">
                         {
                             cartBtn ?
-                            <Button onClick={() => cartDelete(cart_id)} className="px-6">Remove<MdClear className="text-xl"/></Button> :
-                            <Button onClick={handleCartClick} className="px-6">ADD TO CART</Button>
+                                <Button onClick={() => handleCartDelete(cart_id)} className="px-6">Remove<MdClear className="text-xl" /></Button> :
+                                <Button onClick={handleCartClick} className="px-6">ADD TO CART</Button>
                         }
                         {/* <Button className="pr-6 pl-6">BUY NOW</Button> */}
                     </div>
