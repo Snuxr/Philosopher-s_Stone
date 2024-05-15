@@ -127,11 +127,9 @@
         "title": "Clothes"
       },
       "order_placed": 1715194796523
-    }
-  ],
-  "cart": [
+    },
     {
-      "id": "fceec0d1-42b3-497e-be6c-eb2f0597cdca",
+      "id": "305aa7c3-22d2-44a6-a45b-6db4b533a7fb",
       "product": {
         "id": "7d937cca-1979-4b2d-afc8-34d099ebf1d5",
         "name": "Classic Red Pullover Hoodie",
@@ -143,40 +141,43 @@
           "https://i.imgur.com/kg1ZhhH.jpeg"
         ],
         "title": "Clothes"
-      }
+      },
+      "order_placed": 1715233537084
     },
     {
-      "id": "a0c4d9c3-a3d1-4e6b-b846-fda743bff255",
+      "id": "0e13a814-37bc-4a3d-91df-a21ccdc87980",
       "product": {
-        "id": "ab6ff5be-fd90-4168-a076-b44774db4595",
-        "name": "Classic Grey Hooded Sweatshirt",
-        "price": 90,
-        "description": "Elevate your casual wear with our Classic Grey Hooded Sweatshirt. Made from a soft cotton blend, this hoodie features a front kangaroo pocket, an adjustable drawstring hood, and ribbed cuffs for a snug fit. Perfect for those chilly evenings or lazy weekends, it pairs effortlessly with your favorite jeans or joggers.",
+        "id": "9ef31a4d-abdc-4467-920b-48a3e35e5a8c",
+        "name": "Chic Summer Denim Espadrille Sandals",
+        "price": 33,
+        "description": "Step into summer with style in our denim espadrille sandals. Featuring a braided jute sole for a classic touch and adjustable denim straps for a snug fit, these sandals offer both comfort and a fashionable edge. The easy slip-on design ensures convenience for beach days or casual outings.",
         "images": [
-          "https://i.imgur.com/R2PN9Wq.jpeg",
-          "https://i.imgur.com/IvxMPFr.jpeg",
-          "https://i.imgur.com/7eW9nXP.jpeg"
+          "https://i.imgur.com/9qrmE1b.jpeg",
+          "https://i.imgur.com/wqKxBVH.jpeg",
+          "https://i.imgur.com/sWSV6DK.jpeg"
         ],
-        "title": "Clothes"
-      }
+        "title": "Shoes"
+      },
+      "order_placed": 1715233542217
     },
     {
-      "id": "cafa8b49-ee7e-4116-8588-d4bed6f4216b",
+      "id": "8e898135-d86a-4d03-97ba-4a81d17d7a2f",
       "product": {
-        "id": "108acfa0-cde6-4f22-a6a8-2ea701d11b03",
-        "name": "Classic Black Hooded Sweatshirt",
-        "price": 79,
-        "description": "Elevate your casual wardrobe with our Classic Black Hooded Sweatshirt. Made from high-quality, soft fabric that ensures comfort and durability, this hoodie features a spacious kangaroo pocket and an adjustable drawstring hood. Its versatile design makes it perfect for a relaxed day at home or a casual outing.",
+        "id": "8b53b46e-cbc7-4fc7-9841-7a1c5dc562e8",
+        "name": "Futuristic Holographic Soccer Cleats",
+        "price": 39,
+        "description": "Step onto the field and stand out from the crowd with these eye-catching holographic soccer cleats. Designed for the modern player, these cleats feature a sleek silhouette, lightweight construction for maximum agility, and durable studs for optimal traction. The shimmering holographic finish reflects a rainbow of colors as you move, ensuring that you'll be noticed for both your skills and style. Perfect for the fashion-forward athlete who wants to make a statement.",
         "images": [
-          "https://i.imgur.com/cSytoSD.jpeg",
-          "https://i.imgur.com/WwKucXb.jpeg",
-          "https://i.imgur.com/cE2Dxh9.jpeg"
+          "https://i.imgur.com/qNOjJje.jpeg",
+          "https://i.imgur.com/NjfCFnu.jpeg",
+          "https://i.imgur.com/eYtvXS1.jpeg"
         ],
-        "title": "Clothes"
-      }
+        "title": "Shoes"
+      },
+      "order_placed": 1715268438097
     },
     {
-      "id": "f2340a83-3d66-4253-87b8-888234f69635",
+      "id": "b0b7d24d-b671-4351-a68b-d6fd34ac6173",
       "product": {
         "id": "7d937cca-1979-4b2d-afc8-34d099ebf1d5",
         "name": "Classic Red Pullover Hoodie",
@@ -188,39 +189,11 @@
           "https://i.imgur.com/kg1ZhhH.jpeg"
         ],
         "title": "Clothes"
-      }
-    },
-    {
-      "id": "9a06a495-d471-44e1-b291-b449280ca765",
-      "product": {
-        "id": "108acfa0-cde6-4f22-a6a8-2ea701d11b03",
-        "name": "Classic Black Hooded Sweatshirt",
-        "price": 79,
-        "description": "Elevate your casual wardrobe with our Classic Black Hooded Sweatshirt. Made from high-quality, soft fabric that ensures comfort and durability, this hoodie features a spacious kangaroo pocket and an adjustable drawstring hood. Its versatile design makes it perfect for a relaxed day at home or a casual outing.",
-        "images": [
-          "https://i.imgur.com/cSytoSD.jpeg",
-          "https://i.imgur.com/WwKucXb.jpeg",
-          "https://i.imgur.com/cE2Dxh9.jpeg"
-        ],
-        "title": "Clothes"
-      }
-    },
-    {
-      "id": "d55057e7-3bca-4b30-8422-0ca9686998c6",
-      "product": {
-        "id": "108acfa0-cde6-4f22-a6a8-2ea701d11b03",
-        "name": "Classic Black Hooded Sweatshirt",
-        "price": 79,
-        "description": "Elevate your casual wardrobe with our Classic Black Hooded Sweatshirt. Made from high-quality, soft fabric that ensures comfort and durability, this hoodie features a spacious kangaroo pocket and an adjustable drawstring hood. Its versatile design makes it perfect for a relaxed day at home or a casual outing.",
-        "images": [
-          "https://i.imgur.com/cSytoSD.jpeg",
-          "https://i.imgur.com/WwKucXb.jpeg",
-          "https://i.imgur.com/cE2Dxh9.jpeg"
-        ],
-        "title": "Clothes"
-      }
+      },
+      "order_placed": 1715582379411
     }
   ],
+  "cart": [],
   "products": [
     {
       "id": "7d937cca-1979-4b2d-afc8-34d099ebf1d5",

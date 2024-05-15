@@ -49,7 +49,6 @@ const App = () => {
 
   useEffect(() => {
     if(!orderData.isError && orderData.isSuccess) {
-      console.log(orderData.data)
       dispatch(AddAllOrders(orderData.data))
     }
   },[dispatch, orderData.data, orderData.data])
