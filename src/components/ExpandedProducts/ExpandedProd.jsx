@@ -5,8 +5,9 @@ import Link from "../Utils/Link"
 import { useEffect } from "react"
 import { faker } from "@faker-js/faker"
 import useNavigation from "../../Hooks/useNavigation"
+import { MdClear } from "react-icons/md"
 
-const ExpandedProd = ({ product, showBtn }) => {
+const ExpandedProd = ({ product, showBtn, cartBtn, cart_id, cartDelete }) => {
     const dispatch = useDispatch();
     const { navigate } = useNavigation();
 
@@ -52,7 +53,11 @@ const ExpandedProd = ({ product, showBtn }) => {
                 {
                     showBtn &&
                     <div className="flex flex-row justify-end items-center gap-4 p-1 mr-4 ml-4">
-                        <Button onClick={handleCartClick} className="pr-6 pl-6">ADD TO CART</Button>
+                        {
+                            cartBtn ?
+                            <Button onClick={() => cartDelete(cart_id)} className="px-6">Remove<MdClear className="text-xl"/></Button> :
+                            <Button onClick={handleCartClick} className="px-6">ADD TO CART</Button>
+                        }
                         {/* <Button className="pr-6 pl-6">BUY NOW</Button> */}
                     </div>
                 }
