@@ -7,7 +7,7 @@ const ordersSlice = createSlice({
     },
     reducers: {
         AddAllOrders: (state, action) => {
-            state.orders = action.payload;
+            state.orders.push(...action.payload);
         },
         AddSingleOrders: (state, action) => {
             state.orders.push(action.payload);

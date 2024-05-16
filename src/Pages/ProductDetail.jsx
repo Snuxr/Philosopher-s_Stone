@@ -28,8 +28,8 @@ const ProductDetail = ({ product }) => {
         createOrder(
             {
                 product,
-                "order_placed": Date.now(),
-                "id": faker.string.uuid()
+                order_placed: Date.now(),
+                id: faker.string.uuid()
             },
         )
     }
