@@ -3,6 +3,7 @@ import OrderData from "../Components/Utils/OrderData"
 import Link from "../Components/Utils/Link"
 import Line from "../Components/Utils/Line"
 import { useSelector } from "react-redux"
+import  Alert  from "../Components/Utils/Alert"
 
 const Orders = () => {
   const { orders } = useSelector((state) => {
@@ -45,7 +46,14 @@ const Orders = () => {
         </div>
       )
     })
+  } else {
+    content = (
+      <Alert>
+        Looks like you did not place an order.
+      </Alert>
+    )
   }
+  
 
 
   return (
