@@ -13,6 +13,7 @@ import ProductDetail from "./Pages/ProductDetail";
 import Footer from "./Components/Footer/Footer";
 import Cart from "./Pages/Cart";
 import Orders from "./Pages/Orders";
+import GadgetOverview from "./Pages/GadgetOverview";
 
 // Banner Images
 import imgL1 from "./Assets/Banner_images/imgL1.png"
@@ -150,6 +151,21 @@ const App = () => {
     },
   ]
 
+  const allGadget = [...leftBanner_Data, ...rightBanner_Data];
+  let gadgetData;
+  let gadgetPath;
+  if (currPath.toLowerCase().includes('gadgets')) {
+    gadgetData = allGadget.filter((gadget) => {
+      return gadget.id == currPath.split('/')[2]
+    })[0]
+
+    if (gadgetData === undefined) {
+      navigate('/')
+      return
+    }
+    gadgetPath = `/gadgets/${gadgetData?.id}`
+  }
+
   let content
   if (loading) {
     content = (
@@ -181,6 +197,7 @@ const App = () => {
         <Route path={productPath}><ProductDetail product={productData} /></Route>
         <Route path='/cart'><Cart /></Route>
         <Route path='/orders'><Orders /></Route>
+        <Route path={gadgetPath}><GadgetOverview product={gadgetData} /></Route>
       </div>
     )
   }
