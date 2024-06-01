@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { useMemo, useState } from "react";
+import { useMemo, useEffect, useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import Line from "../Utils/Line"
 import useNavigation from "../../Hooks/useNavigation";
@@ -7,7 +7,7 @@ import { AiOutlineLoading } from "react-icons/ai";
 
 const SearchInput = () => {
     const [query, setQuery] = useState('')
-    const [showSearch, setShowSearch] = useState(true)
+    const [showSearch, setShowSearch] = useState(false)
     const [showLoading, setShowLoading] = useState(false)
 
     const { navigate } = useNavigation()
@@ -23,6 +23,14 @@ const SearchInput = () => {
         }
         )
     }, [products, query])
+
+    useEffect(() => {
+        if (filteredItems.length > 0) {
+            setShowSearch(true)
+        } else {
+            setShowSearch(false)
+        }
+    },[filteredItems])
 
     const handleClick = (item) => {
         setQuery(item?.name);
@@ -63,7 +71,7 @@ const SearchInput = () => {
             </div>
             {
                 showSearch &&
-                <div className="min-w-[25rem] absolute top-[4.55rem] max-h-72 z-10 bg-gray-800 text-gray-100 text-xs font-light p-2 bg-opacity-20 backdrop-blur-sm rounded-b-md overflow-auto overflow-y-scroll">
+                <div className={`min-w-[25rem] absolute top-[4.55rem] max-h-72 z-10 bg-gray-100 text-gray-100 text-xs font-light p-2 bg-opacity-20 backdrop-blur-sm rounded-b-md overflow-auto overflow-y-scroll`}>
                     {content}
                 </div>
             }
