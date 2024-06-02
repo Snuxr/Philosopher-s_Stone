@@ -30,9 +30,9 @@ const BannerSlider = ({ data }) => {
         pauseOnHover: true,
     };
     
-    const content = data.map((product   ) => {
+    const content = data.map((product) => {
         const classes = classnames(
-            (product.id === 4 || product.id === 5) && 'text-gray-600'
+            (product.name === "TP-7" || product.name === "Galaxy Tab S9 Ultra") && 'text-gray-600'
         )
 
         return (
@@ -40,11 +40,11 @@ const BannerSlider = ({ data }) => {
                 <div className={`absolute top-4 left-6 flex flex-col justify-start p-1 ${classes}`}>
                     Introducing
                     <div className="flex flex-row items-center gap-2 text-base">
-                        {product.id === 1 ? <FaMeta /> : ' '}
+                        {product.id === "Meta Quest 3" ? <FaMeta /> : ' '}
                         {product.title}
                     </div>
                 </div>
-                <img className="select-none border-none outline-none rounded-3xl" src={product.link} alt={product.name} />
+                <img className="select-none border-none outline-none rounded-3xl" src={product.images[0]} alt={product.name} />
                 <Link
                     to={`/gadgets/${product.id}`}
                     key={product.id}

@@ -99,55 +99,55 @@ const App = () => {
 
   const leftBanner_Data = [
     {
-      id: 1,
-      link: imgL1,
-      price:"499.99",
+      id: "ea3dec5f-774c-4308-ad7a-3d2084b127ee",
       name: "Meta Quest 3",
-      title: "Meta Quest 3",
+      price: 499,
       description: "Meta Oculus Quest 3 Advanced All-in-One Virtual Reality Headset (128GB)",
+      images: [imgL1],
+      title: "Meta Quest 3",
     },
     {
-      id: 2,
-      link: imgL2,
-      price:"199.00",
+      id:  "ffd83d53-6a86-4d42-8d3d-6cfdf3f6cff5",
       name: "Rabbit R1",
-      title: "R1. your pocket companion",
+      price: 199,
       description: "Rabbit R1, your pocket companion",
+      images: [imgL2],
+      title: "R1. your pocket companion",
     },
     {
-      id: 3,
-      link: imgL3,
-      price:"1300.00",
+      id: "c074f250-06e7-49f0-926b-ee309c9f699a",
       name: "Samsung Galaxy S24 Ultra",
-      title: "Samsung Galaxy S24 Ultra",
+      price: 1300,
       description: "Samsung Galaxy S24 Ultra 5G AI Smartphone",
+      images: [imgL3],
+      title: "Samsung Galaxy S24 Ultra",
     },
   ]
 
   const rightBanner_Data = [
     {
-      id: 4,
-      link: imgR1,
-      price:"1359.99",
+      id: "f28aa0b3-7c27-47c7-a7e8-929262f58c04",
       name: "TP-7",
+      price: 1359,
+      description: "Intuitive muscle reflex control",
+      images: [imgR1],
       title: "TP-7 field recorder",
-      description: "Intuitive muscle reflex control"
     },
     {
-      id: 5,
-      link: imgR2,
-      price:"1299.99",
+      id: "7c71d2c0-e292-4b45-8432-a55a7a2b8c3a",
       name: "Galaxy Tab S9 Ultra",
+      price: 1299,
+      description: "Samsung Galaxy Tab S9 Ultra 36.99 cm (14.6 inch) Dynamic AMOLED 2X Display, RAM 12 GB, ROM 512 GB Expandable, S Pen in-Box, Wi-Fi Tablet, Gray",
+      images: [imgR2],
       title: "Galaxy Tab S9 Ultra",
-      description: "Samsung Galaxy Tab S9 Ultra 36.99 cm (14.6 inch) Dynamic AMOLED 2X Display, RAM 12 GB, ROM 512 GB Expandable, S Pen in-Box, Wi-Fi Tablet, Gray"
     },
     {
-      id: 6,
-      link: imgR3,
-      price:"1799.99",
+      id: "c6d4e65f-b526-4596-ac70-58d18530c160",
       name: "MacBook Pro M3 Pro",
+      price: 1799,
+      description: "Apple 2023 MacBook Pro (14-inch, M3 Pro chip with 11-core CPU and 14-core GPU, 18GB Unified Memory, 512GB) - Space Grey",
+      images: [imgR3],
       title: "Apple the new MacBook Pro featuring the M3 family of chips, making the world's best pro laptop even better",
-      description: "Apple 2023 MacBook Pro (14-inch, M3 Pro chip with 11-core CPU and 14-core GPU, 18GB Unified Memory, 512GB) - Space Grey"
     },
   ]
 

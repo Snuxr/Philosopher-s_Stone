@@ -1,13 +1,50 @@
 import { FaMeta } from "react-icons/fa6";
+import { faker } from "@faker-js/faker"
 import Line from "../Components/Utils/Line";
 import Button from "../Components/Utils/Button";
+import { AddSingleOrders, AddToCart, useAddToCartMutation, useCreateOrderMutation } from "../store";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import useNavigation from "../Hooks/useNavigation";
 
 const GadgetOverview = ({ product }) => {
+    const dispatch = useDispatch();
+
+    const {navigate} = useNavigation()
+
+    const cartData = useAddToCartMutation()
+    const [createOrder, results] = useCreateOrderMutation()
+    
     const handleCartClick = () => {
+        cartData[0]({
+            product,
+            id: faker.string.uuid()
+        })
     }
 
     const handleOrderClick = () => {
+        createOrder(
+            {
+                product,
+                order_placed: Date.now(),
+                id: faker.string.uuid()
+            }
+        )
     }
+
+    useEffect(() => {
+        if(!cartData[1].isError && cartData[1].isSuccess) {
+            dispatch(AddToCart(cartData[1].data));
+            navigate('/cart');
+        }
+    }, [dispatch, cartData[1].data])
+
+    useEffect(() => {
+        if(!results.isError && results.isSuccess) {
+            dispatch(AddSingleOrders(results.data));
+            navigate(`/orders`)
+        }
+    })
 
     const newDates = new Date()
     newDates.setDate(newDates.getDate() + 3)
@@ -16,8 +53,8 @@ const GadgetOverview = ({ product }) => {
     return (
         <div className="grid grid-cols-2 gap-8 m-6">
             <div key={product?.id} className="font-extralight text-xl border-none outline-none" >
-                <img className="select-none border-none outline-none rounded-3xl" src={product?.link} alt={product?.name} />
-                <div className={`relative bottom-10 right-10 flex flex-row justify-end items-center gap-2 text-lg p-1 ${product?.id == 4 || product?.id == 5 ? 'text-gray-900' : 'text-gray-100'}`}>
+                <img className="select-none border-none outline-none rounded-3xl" src={product?.images[0]} alt={product?.name} />
+                <div className={`relative bottom-10 right-10 flex flex-row justify-end items-center gap-2 text-lg p-1 ${product?.name  === "TP-7" || product?.name === "Galaxy Tab S9 Ultra" ? 'text-gray-900' : 'text-gray-100'}`}>
                     {product?.id === 1 ? <FaMeta /> : ' '}
                     {product?.name}
                 </div>

@@ -36,7 +36,7 @@ const Cart = () => {
     <div className="mt-8 mb-8 mr-6 ml-6 flex flex-col items-center gap-16">
       <Header>Cart</Header> 
       {showModal && Modal}
-      <div className="flex flex-col items-center gap-4">
+      <div className="w-full flex flex-col items-center gap-4">
         {cartContent}
       </div>
       <div className="w-full flex flex-row justify-end">

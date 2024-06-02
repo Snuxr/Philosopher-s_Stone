@@ -20,7 +20,6 @@ const BuyNowModal = ({ onClose, cart }) => {
   }, [])
 
   const [createOrder, results] = useCreateOrderMutation()
-
   const handleOrderClick = () => {
     productArray.forEach(product => {
       createOrder(product)

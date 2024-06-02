@@ -4,9 +4,9 @@ import Link from "../Utils/Link";
 const NavBar = () => {
     const NavLinks = [
         { id: 1, label: 'Home', path: '/' },
-        { id: 2, label: 'Deals', path: '/deals' },
         { id: 3, label: 'Cart', path: '/cart' },
-        { id: 4, label: 'Orders', path: '/orders' }
+        { id: 4, label: 'Orders', path: '/orders' },
+        { id: 2, label: 'Account', path: '/account' }
     ]
     const content = NavLinks.map((link) => {
         return (

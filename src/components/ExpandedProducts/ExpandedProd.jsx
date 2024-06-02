@@ -43,14 +43,12 @@ const ExpandedProd = ({ product, showBtn, cartBtn, cart_id }) => {
           }
     }, [dispatch, deleteCartResults.data])
 
-    
-
     return (
         <div className="w-full max-h-72 flex flex-row gap-2">
             <Link to={`/products/${product.id}`}>
-                <img src={product.images[0]} className="max-w-72 max-h-72 rounded-sm shadow-full shadow-indigo-500/50" />
+                <img src={product.images[0]} className="max-w-72 max-h-72 aspect-square object-cover rounded-sm shadow-full shadow-indigo-500/50" />
             </Link>
-            <div className="flex flex-col justify-between pr-2 pl-2 ">
+            <div className="w-full flex flex-col justify-between pr-2 pl-2">
                 <Link to={`/products/${product.id}`} className="flex flex-col gap-2">
                     <div className="text-gray-100 text-lg font-semibold p-1">
                         {product.name}
